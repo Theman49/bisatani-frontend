@@ -131,6 +131,13 @@ a {
     transition: visibility ease 1s;
     visibility: hidden;
     transform: translateY(-100px);
+    
+    background-image: url("./assets/Vector-2.png");
+    background-position: bottom;
+    background-size: 175%;
+    background-repeat: no-repeat;
+    background-position-y: 450px;
+    background-position-x: 0vh;
 } #notification-section ul li {
     list-style: none;
     padding: 25px 20px;

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    console.log("document ready")
 
     // show sidebar-menu
     $("#topbar-menu .icon-menu").click(function() {
@@ -28,5 +29,44 @@ $(document).ready(function(){
         $(this).remove();
     })
 
+
+    // change icon when primary menu clicked to active 
+    var imgPrimaryMenu = $("#primary-menu div img");
+    function activePrimaryMenu(index){
+        console.log(imgPrimaryMenu[index].src)
+    }
+
+    var activePage = ""
+    var tempIcon = ""
+
+    $("#primary-menu div").click(function() {
+        if(activePage != $(this)){
+            if(activePage != ""){
+                activePage[0].children[0].src = tempIcon;
+                activePage[0].children[1].style.color = "#494848"
+            }else {
+                $("#primary-menu div:first-child")[0].children[0].src = "./assets/home.png"
+                $("#primary-menu div:first-child")[0].children[1].style.color = "#494848"
+            }
+
+            activePage = $(this)
+        }
+        let pathFile = $(this)[0].children[0].src;
+        
+       
+
+
+        let currImg = pathFile.split("/")
+        let tempLength = currImg.length;
+        let fileName = currImg[tempLength - 1].split(".")
+        let activeImg = fileName[0] + "-active.png";
+
+        tempFileName = activeImg.split("-active"); 
+        tempIcon = "./assets/" + tempFileName.join("") 
+
+
+        $(this)[0].children[0].src = "./assets/" + activeImg;
+        $(this)[0].children[1].style.color = "#7DCD86"
+    })
 
 });

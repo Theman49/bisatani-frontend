@@ -69,4 +69,81 @@ $(document).ready(function(){
         $(this)[0].children[1].style.color = "#7DCD86"
     })
 
+    $('#close-chatbot').click(function() {
+        $('#chatbot').css({
+            "visibility" : "hidden",
+            "opacity" : "0"
+        })
+        $('#floating-button-chatbot').css("visible", "visible")
+    })
+
+    $('#floating-button-chatbot').click(function() {
+        $('#chatbot').css({
+            "visibility" : "visible",
+            "opacity" : "1"
+        })
+
+        $(this).css("visible", "hidden")
+    })
+
+    // $("#tab-utama > a").click(function() {
+    //     $("#tab-utama a.active").removeClass("active")
+    //     $(this).addClass("active")
+    // })
+
+    $("#tab-utama > div").click(function() {
+        $("#tab-utama div.active").removeClass("active")
+        $(this).addClass("active")
+    })
+
+
+    $('.notifikasi-harian .close-notifikasi').click(function() {
+        $(this)[0].parentElement.style = "visibility: hidden; opacity: 0"
+        setTimeout(() => {
+            $(this)[0].parentElement.style = "display: none"
+            
+        }, 500);
+    })
+
+    $('#tombol-panen:not(.disabled)').click(function() {
+        $('#panen-section').css({
+            "visibility" : "visible",
+            "opacity" : "1"
+        })
+
+        $('#LAHANKU .container p.btn[id]').addClass("disabled")
+
+    })
+
+    $('#close-form-panen').click(function() {
+        $('#panen-section').css({
+            "visibility" : "hidden",
+            "opacity" : "0"
+        })
+        $('#LAHANKU .container p.btn[id]').removeClass("disabled")
+    })
+
+    $('#tombol-tambah-lahan').click(function() {
+        $('#tambah-lahan-section').css({
+            "visibility" : "visible",
+            "opacity" : "1"
+        })
+
+        $('#LAHANKU .container p.btn[id]').addClass("disabled")
+
+    })
+
+    $('#close-form-tambah-lahan').click(function() {
+        $('#tambah-lahan-section').css({
+            "visibility" : "hidden",
+            "opacity" : "0"
+        })
+        
+        $('#LAHANKU .container p.btn[id]').removeClass("disabled")
+    })
+
+    $('#status-lahan > div > label').click(function() {
+        $('#status-lahan > div > label.active').removeClass("active")
+        $(this).addClass("active")
+    })
 });

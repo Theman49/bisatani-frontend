@@ -148,77 +148,67 @@
 
     <div class="container" id="section-2">
       <div class="text-center">
-        <p class="p-fs-16-fw-900">Harga jagung terkini</p>
+        <p class="p-fs-16-fw-900">Harga jagung</p>
         <div class="d-flex justify-content-between px-3 align-items-center">
-          <p>Kota/Kabupaten</p>
-          <p>Harga Di Tingkat Eceran (Rp)</p>
-          <p>Harga Di Tingkat Produsen (Rp)</p>
+          <p>Kode</p>
+          <p>Kadar Air</p>
+          <p>Harga</p>
         </div>
       </div>
       <table class="table">
         <tbody>
           <tr class="bg-white-1">
-            <td>Bangkalan</td>
-            <td>5.700</td>
+            <td>MP001</td>
+            <td>16,1% - 19,0%</td>
             <td>3.800</td>
           </tr>
           <tr class="bg-grey-2">
-            <td>Bondowoso</td>
-            <td>4.725</td>
-            <td>3.800</td>
+            <td>MP002</td>
+            <td>19,1% - 22,0%</td>
+            <td>4.070</td>
           </tr>
           <tr class="bg-white-1">
-            <td>Bangkalan</td>
-            <td>-</td>
+            <td>MP001</td>
+            <td>16,1% - 19,0%</td>
             <td>3.800</td>
           </tr>
           <tr class="bg-grey-2">
-            <td>Bondowoso</td>
-            <td>-</td>
-            <td>3.800</td>
+            <td>MP002</td>
+            <td>19,1% - 22,0%</td>
+            <td>4.070</td>
           </tr>
           <tr class="bg-white-1">
-            <td>Bangkalan</td>
-            <td>5.700</td>
+            <td>MP001</td>
+            <td>16,1% - 19,0%</td>
             <td>3.800</td>
           </tr>
           <tr class="bg-grey-2">
-            <td>Bondowoso</td>
-            <td>4.725</td>
-            <td>3.800</td>
-          </tr>
-          <tr class="bg-white-1">
-            <td>Bangkalan</td>
-            <td>5.700</td>
-            <td>3.800</td>
-          </tr>
-          <tr class="bg-grey-2">
-            <td>Bondowoso</td>
-            <td>4.725</td>
-            <td>3.800</td>
+            <td>MP002</td>
+            <td>19,1% - 22,0%</td>
+            <td>4.070</td>
           </tr>
         </tbody>
       </table>
     </div>
     
     <div id="primary-menu" class="d-flex justify-content-between">
-      <div>
+      <div onclick="document.location.href = './index.html'">
         <img src="./assets/home-active.png" alt="">
         <p style="color: #7DCD86">Beranda</p>
       </div>
-      <div>
+      <div onclick="document.location.href = './diskusi.html'">
         <img src="./assets/bubble-chat-1.png" alt="">
         <p>Diskusi</p>
       </div>
-      <div>
+      <div onclick="document.location.href = './lahanku.html'">
         <img src="./assets/map.png" alt="">
         <p>Lahanku</p>
       </div>
-      <div>
+      <div onclick="document.location.href = './beli.html'">
         <img src="./assets/Beli.png" alt="">
         <p>Beli</p>
       </div>
-      <div>
+      <div onclick="document.location.href = './user.html'">
         <img src="./assets/user.png" alt="">
         <p>Akun</p>
       </div>
@@ -246,6 +236,84 @@
       </ul>
     </div>
 
+    <div id="floating-button-chatbot">
+      <img src="./assets/chatbot.png" alt="">
+    </div>
+
+    <div id="chatbot">
+      <div id="top-chatbot" class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <img src="./assets/jagung.png" alt="">
+          <div>
+            <h3>Bisa Tani</h3>
+            <p class="status">Online Now</p>
+          </div>
+        </div>
+
+        <div>
+          <img id="close-chatbot" src="./assets/close-chatbot.png" alt="">
+        </div>
+      </div>
+
+      <div id="content-chatbot">
+        <div class="jagung">
+          <div>
+            <img src="./assets/jagung.png" alt="">
+            <div class="text">
+              <p>Halo, Saya Bistan, Saya bisa memberikan jawaban secara cepat tentang pertanyaan umum seputar pertanian.</p>
+            </div>
+          </div>
+          <p class="send-time">10 seconds ago</p>
+        </div>
+
+        <div class="user">
+          <div>
+            <img src="./assets/profil.png" alt="">
+            <div class="text">
+              <p>Saya ingin bertanya bagaimana mengatasi hama</p>
+            </div>
+          </div>
+          <p class="send-time">3 minutes ago</p>
+        </div>
+
+        <div class="jagung">
+          <div>
+            <img src="./assets/jagung.png" alt="">
+            <div class="text">
+              <p>Penanggulangan hama ini dapat dilakukan dengan melakukan penyemprotan menggunakan insektisida yang sesuai dengan dosis yang di anjuran</p>
+            </div>
+          </div>
+          <p class="send-time">10 seconds ago</p>
+        </div>
+        
+        <div class="user">
+          <div>
+            <img src="./assets/profil.png" alt="">
+            <div class="text">
+              <p>Terimakasih atas jawabannya</p>
+            </div>
+          </div>
+          <p class="send-time">3 minutes ago</p>
+        </div>
+
+        <div class="jagung">
+          <div>
+            <img src="./assets/jagung.png" alt="">
+            <div class="text">
+              <p>Terimakasih Kembali, Apakah ada pertanyaan lainnya?</p>
+            </div>
+          </div>
+          <p class="send-time">10 seconds ago</p>
+        </div>
+
+      </div>
+
+      <div id="input-chatbot">
+        <input id="message" type="text">
+        <!-- <p><span role="textbox" contenteditable></span></p> -->
+        <img src="./assets/send-chat.png" alt="">
+      </div>
+    </div>
 
 
     <!-- Optional JavaScript; choose one of the two! -->

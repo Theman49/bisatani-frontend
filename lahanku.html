@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>LAHANKU | BISATANI</title>
+</head>
+<body>
+    <div id="topbar-menu" class="container">
+      <div class="d-flex justify-content-between">
+        <div>
+          <a href="index.html"><img src="./assets/LOGO-BISATANI.png" alt=""></a>
+        </div>
+        <div class="d-flex justify-content-between">
+            <img id="icon-notification" src="./assets/notification-2.png" alt="">
+
+            <div id="notification-section" style="display: none">
+              <ul class="p-0">
+                <li class="d-flex">
+                  <img src="./assets/check-mark-1.png" alt="">
+                  <p class="p-fs-10-fw-400">Pengajuan pinjaman modal anda telah diverifikasi</p>
+                </li>
+                <li class="d-flex">
+                  <img src="./assets/like-1.png" alt="">
+            <p class="p-fs-10-fw-400"><span class="fw-bold">Dea Syah Kania</span> menyukai postingan anda</p>
+                </li>
+                <li class="d-flex">
+                  <img src="./assets/chat-1.png" alt="">
+            <p class="p-fs-10-fw-400"><span class="fw-bold">Dea Syah Kania</span> mengomentari postingan anda</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="box-icon-menu">
+              <div class="icon-menu"></div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="tab-utama" class="d-flex justify-content-between">
+        <a href="#" class="active">Umum</a>
+        <a href="#">Aktivitas</a>
+        <a href="#">Riwayat Lahan</a>
+    </div> -->
+    <div id="tab-utama" >
+        <div class="active">
+            <a href="#">Umum</a>
+        </div>
+        <div>
+            <a href="#">Aktivitas</a>
+        </div>
+        <div>
+            <a href="#">Riwayat Lahan</a>
+        </div>
+    </div>
+
+    <div id="LAHANKU">
+
+
+        <div id="maps" style="width: 100%; height: 175px;background: grey;">
+
+        </div>
+
+        <div class="container">
+            <div class="notifikasi-harian">
+                <p class="text">Hari ini jagungmu berumur 90 HST (Hari Setelah Tanam). Saatnya melakukan Pemanenan</p>
+                <p class="badge">Permanenan</p>
+                <label class="close-notifikasi">X</label>
+            </div>
+
+            <div class="notifikasi-harian">
+                <p class="text">Hari ini jagungmu berumur 10 HST (Hari Setelah Tanam). Saatnya melakukan Penyiraman Rutin</p>
+                <p class="badge">Penyiraman Rutin</p>
+                <label class="close-notifikasi">X</label>
+            </div>
+
+            <div id="informasi-lahan">
+                <h3 class="sub-title">INFORMASI</h3>
+                <div class="d-flex justify-content-between">
+                    <p>LUAS LAHAN</p>
+                    <p class="keterangan">10000,0m<sup>2</sup></p>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <p>STATUS LAHAN</p>
+                    <p class="badge text-dark">Aktif</p>
+                </div>
+
+                <h3 class="sub-title">Komoditas yang ditanam</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <img src="./assets/jagung-2.png" alt="">
+                        <p class="m-0">Jagung</p>
+                    </div>
+                    <p class="badge text-dark m-0">90 HST</p>
+                </div>
+
+                <h3 class="sub-title">Waktu Kegiatan</h3>
+                <div class="d-flex justify-content-between">
+                    <p>TANAM</p>
+                    <p class="keterangan">23 Maret 2022</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>PANEN</p>
+                    <p class="keterangan">23 July 2022</p>
+                </div>
+
+                <div class="d-flex justify-content-evenly">
+                    <p class="btn" id="tombol-panen">Panen</p>
+                    <p id="tombol-tambah-lahan" class="btn">+ Tambahkan Lahan</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="panen-section">
+        <div id="form-panen">
+            <div class="d-flex justify-content-between">
+                <p>Panen</p>
+                <p id="close-form-panen">X</p>
+            </div>
+
+            <div>
+                <label>Tanggal Panen</label>
+                <input type="date" placeholder="Isikan tanggal panen">
+            </div>
+
+            <div>
+                <label>Waktu Panen</label>
+                <input type="time" placeholder="Isikan waktu panen">
+            </div>
+
+            <div>
+              <a href="#" class="btn">+ Tambahkan Foto</a>
+              <a href="#" class="simpan">Simpan</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="tambah-lahan-section">
+        <div id="form-tambah-lahan">
+            <div class="d-flex justify-content-between">
+                <p>Informasi Lahan</p>
+                <p id="close-form-tambah-lahan">X</p>
+            </div>
+
+            <div>
+                <label>Wilayah/Lokasi Lahan</label>
+                <input type="text" placeholder="Isikan lokasi lahan anda">
+            </div>
+
+            <div>
+                <label>Luas Lahan</label>
+                <input type="text" placeholder="Isikan luas lahan anda">
+            </div>
+
+            <div id="status-lahan">
+              <label>Status Lahan</label>
+              <div>
+                <label for="statusLahanAktif" class="active">Aktif</label>
+                <label for="statusLahanTidakAktif" >Tidak Aktif</label>
+              </div>
+            </div>
+
+            <div class="d-none">
+              <input id="statusLahanAktif" type="radio" name="status-lahan" value="aktif" checked>
+              <input id="statusLahanTidakAktif" type="radio" name="status-lahan" value="tidakAktif">
+            </div>
+
+            <p class="sub-title">Komoditas yang ditanam</p>
+
+            <div>
+                <label>Varietas</label>
+                <input type="text" placeholder="Isikan varietas yang anda tanam">
+            </div>
+
+            <div>
+                <label>Tanggal Tanam</label>
+                <input type="date" placeholder="Isikan tanggal tanam">
+            </div>
+
+            <div>
+                <label>Tanggal Panen</label>
+                <input type="date" placeholder="Isikan tanggal panen">
+            </div>
+
+            <div>
+              <a href="#" class="simpan">Simpan</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="primary-menu" class="d-flex justify-content-between">
+      <div onclick="document.location.href = './index.html'">
+        <img src="./assets/home.png" alt="">
+        <p>Beranda</p>
+      </div>
+      <div onclick="document.location.href = './diskusi.html'">
+        <img src="./assets/bubble-chat-1.png" alt="">
+        <p>Diskusi</p>
+      </div>
+      <div onclick="document.location.href = './lahanku.html'">
+        <img src="./assets/map-active.png" alt="">
+        <p style="color: #7DCD86">Lahanku</p>
+      </div>
+      <div onclick="document.location.href = './beli.html'">
+        <img src="./assets/Beli.png" alt="">
+        <p>Beli</p>
+      </div>
+      <div onclick="document.location.href = './user.html'">
+        <img src="./assets/user.png" alt="">
+        <p>Akun</p>
+      </div>
+    </div>
+
+
+    <div id="sidebar-menu">
+      <i class="bi bi-x-lg icon-menu"></i>
+      <ul>
+        <li class="active-sidebar">
+          <a href="#" class="p-fs-15-fw-400"><img src="./assets/notification-2.png" alt="">Notifikasi</a>
+        </li>
+        <li>
+          <a href="#" class="p-fs-15-fw-400"><img src="./assets/history-1.png" alt="">Riwayat Transaksi</a>
+        </li>
+        <li>
+          <a href="#" class="p-fs-15-fw-400"><img src="./assets/user.png" alt="">Tentang Kami</a>
+        </li>
+        <li>
+          <a href="#" class="p-fs-15-fw-400"><img src="./assets/information-1.png" alt="">Bantuan</a>
+        </li>
+        <li>
+          <a href="#" class="p-fs-15-fw-400"><img src="./assets/logout-1.png" alt="">Keluar</a>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+</body>
+</html>

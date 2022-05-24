@@ -2,9 +2,23 @@
     font-family: 'Montserrat';
     src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf');
   }
+
+:root {
+    --color-green-primary:  #7DCD86;
+    --color-green-secondary:  #CDE293;
+
+    --color-grey-1: #494848;
+    --color-grey-2: #4948488F;
+    ;
+
+    --color-white-1: #fff;
+    --color-white-2: #f3f3f3;
+}
+* {
+    font-family: 'Montserrat';
+}
 body {
     background: #F3F3F3;
-    font-family: 'Montserrat';
 }
 
 img#background1 {
@@ -17,6 +31,7 @@ p,
 a {
     color: #494848;
     ;
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -293,11 +308,12 @@ a {
 }
 #section-2 .d-flex p {
     font-family: Montserrat;
-    font-size: 8px;
-    font-weight: 400;
-    line-height: 11px;
-    letter-spacing: 0em;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 132.4%;
     text-align: center;
+    text-transform: capitalize;
+    color: #494848;
     width: 68px;
     margin-bottom: 3px;
 }
@@ -315,10 +331,7 @@ a {
 
 #section-2 tr td:first-child {
     padding-left: 20px;
-    width: 43%;
-}
-#section-2 tr td:last-child {
-    text-align: center;
+    width: 39%;
 }
 
 
@@ -380,6 +393,409 @@ a {
     display: block;
 }
 
+
+#floating-button-chatbot {
+    width: 48px;
+    height: 50px;
+    border-radius: 24px 24px 9px;
+    background-color: var(--color-green-secondary);
+    display: inline-block;
+    padding: 7px;
+    position: fixed;
+    bottom: 85px;
+    right: 8px;
+    transition: all ease 1s;
+}
+
+#chatbot {
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 1s;
+    height: calc(100vh - 151px);
+    background-color: var(--color-white-2);
+    position: fixed;
+    top: 82px;
+    width: calc(100% - 18px);
+    margin: 0 9px;
+} #chatbot #top-chatbot {
+    width: 301px;
+    border-bottom: 1px solid var(--color-green-primary);
+    margin: 0 auto;
+    margin-bottom: 10px;
+} #chatbot #top-chatbot img {
+    margin-right: 15px;
+} #chatbot #top-chatbot > div.d-flex > div {
+    margin-left: -10px;
+    margin-top: 10px;
+} #chatbot #top-chatbot > div.d-flex h3 {
+    color: #2D3F65;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 0;
+} #chatbot #top-chatbot > div.d-flex p.status {
+    color: var(--color-green-primary);
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 11px;
+    margin-bottom: 0;
+} #chatbot #content-chatbot {
+    height: calc(100% - 125px);
+    border-radius: 36px 36px 10px 10px;
+    background-color: var(--color-white-1);
+    overflow-y: auto;
+    padding: 24px 5px;
+} #chatbot #content-chatbot > div > div {
+    display: flex;
+    align-items: center;
+} #chatbot #content-chatbot > div.user > div {
+    flex-direction: row-reverse;
+} #chatbot #content-chatbot .user .text {
+    background-color: var(--color-green-secondary);
+    margin-right: 10px;
+    width: 55%;
+}#chatbot #content-chatbot .jagung .text {
+    background-color: var(--color-green-primary);
+    width: 239px;
+}#chatbot #content-chatbot .jagung .text,
+ #chatbot #content-chatbot .user .text{
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    margin-left: -10px;
+    height: fit-content;
+} #chatbot #content-chatbot .jagung .text > p,
+ #chatbot #content-chatbot .user .text > p{ 
+    color: #676767;
+    text-align: justify;
+} #chatbot #content-chatbot .user img {
+    background-color: #ABF4B3;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 10px;
+} #chatbot #content-chatbot .jagung img {
+    width: 35px;
+    margin-right: 15px;
+} #chatbot #content-chatbot .send-time {
+    font-weight: 400;
+    font-size: 7px;
+    line-height: 8px;
+
+    color: #676767;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    text-align: right;
+    margin-right: 80px;
+} #chatbot #input-chatbot {
+    background-color: var(--color-green-primary);
+    display: flex;
+    border-radius: 7px;
+    padding: 12px 6px;
+    align-items: center;
+} #chatbot #input-chatbot > input#message {
+    width: 304px;
+    border-radius: 38px;
+    padding: 5px 15px;
+    height: auto;
+} #chatbot #input-chatbot > input#message:focus {
+    outline: none;
+    color: #676767;
+} #chatbot #input-chatbot img {
+    width: 22px;
+    height: 16px;
+    margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+/* L A H A N K U */
+#LAHANKU {
+    background-color: #FFFFFF;
+    margin: 0 6px;
+    margin-bottom: 6px;
+    border-radius: 15px;
+} #LAHANKU .container {
+    padding: 14px;
+} #LAHANKU .notifikasi-harian {
+    transition: all ease 1s;
+    background: rgba(253, 202, 79, 0.49);
+    border-radius: 10px;
+    padding: 17px 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+} #LAHANKU .notifikasi-harian .text {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    /* or 12px */
+
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+    margin-bottom: 0;
+} #LAHANKU .notifikasi-harian .badge {
+    width: 134px;
+    padding: 2px;
+    margin-bottom: 0;
+    background-color: white;
+    color: #494848;
+    border-radius: 10px;
+    margin-top: 6px;
+} #LAHANKU .notifikasi-harian label {
+    color: #FFFFFF;
+    font-weight: 700;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+} #LAHANKU #informasi-lahan .sub-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 124.84%;
+    letter-spacing: 0.04em;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 13px 0;
+} #LAHANKU #informasi-lahan .btn {
+    width: 130px;
+    background: #028D12;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 24px;
+    /* or 240% */
+    opacity: 0.5;
+    text-align: center;
+    color: #FFFFFF;
+    flex-basis: 45%;
+} #LAHANKU #informasi-lahan p {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 124.84%;
+    letter-spacing: 0.04em;
+    color: #000;
+    margin-bottom: 20px;
+} #LAHANKU #informasi-lahan p.keterangan {
+    color: var(--color-green-primary);
+} #LAHANKU #informasi-lahan p.badge {
+    border-radius: 6px;
+    background: #9FF2A9;
+}
+
+/* #tab-utama {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 0 6px;
+    text-align: center;
+} #tab-utama > a {
+    padding: 5px 15px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 24px;
+    color: var(--color-grey-2);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+} #tab-utama > a:not(:last-child){
+    flex-basis: 35%;
+} #tab-utama > a.active {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 24px;
+    background-color: #fff;
+    color: var(--color-green-primary);
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.25);
+} */
+
+#tab-utama { 
+    position: relative;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 0 6px;
+} #tab-utama div {
+    padding: 5px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #F3F3F3;
+    position: absolute;
+} #tab-utama div a {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 24px;
+    color: rgba(73, 72, 72, 0.56);
+} #tab-utama div:first-child {
+    width: 35%;
+    text-align: center;
+    z-index: 200;
+} #tab-utama div:nth-child(2) {
+    width: 63%;
+    text-align: right;
+    z-index: 150;
+} #tab-utama div:last-child {
+    width: 100%;
+    text-align: right;
+    z-index: 100;
+} #tab-utama > div.active{
+    background-color: #fff;
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.25);
+} #tab-utama > div.active > a {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--color-green-primary);
+}
+
+
+
+#panen-section,
+#tambah-lahan-section {
+    transition: all ease 1s;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    background-color: rgba(49, 7, 7, 0.1);
+} #panen-section #form-panen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97vw;
+    height: 70vh;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 24px 18px;
+} #panen-section #form-panen div:first-child {
+    padding: 0 10px;
+} #panen-section #form-panen div:not(:first-child),
+#tambah-lahan-section #form-tambah-lahan div:not(:first-child){
+    position: relative;
+    margin-top: 34px;
+} #panen-section label,
+#tambah-lahan-section label:not([for]) {
+    background-color: white;
+    border-radius: 19px;
+    border-bottom: 3px solid var(--color-green-primary);
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    padding: 5px 10px;
+    color: #494848;
+    position: absolute;
+    transform: translate(10px, -50%);
+} #panen-section input,
+#tambah-lahan-section input {
+    border: none;
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 10px;
+    color: #979797;
+    width: 100%;
+} #panen-section input:focus,
+#tambah-lahan-section input:focus {
+    outline: none;
+} #panen-section input::placeholder,
+#panen-section input::placeholder {
+    color: #c4c4c4;
+} #panen-section #form-panen div:last-child,
+ #tambah-lahan-section #form-tambah-lahan > div:last-child{
+    position: absolute;
+    bottom: 50px;
+    width: inherit;
+    left: 50%;
+    transform: translateX(-50%);
+} #panen-section div > .btn {
+    background: #7DCD86;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px; 
+    padding: 13px 53px;
+    color: #fff;
+    text-decoration-line: underline;
+    width: 85%;
+    margin: 0 7.5%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: .9;
+} #panen-section div > .simpan,
+#tambah-lahan-section .simpan {
+    opacity: .9;
+    background: #7DCD86;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px; 
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    width: 101px;
+    height: 23px;
+    padding: 2px 0;
+    margin: 0 calc((100% - 101px)/2);
+    margin-top: 35px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+}
+
+#tambah-lahan-section {
+    background-color: #FFF;
+    padding: 27px 21px;
+    height: calc(100vh - 80px);
+    border-radius: 0 0 15px 15px;
+} #tambah-lahan-section #form-tambah-lahan label:not([for]) {
+    border: none;
+} #tambah-lahan-section div#status-lahan > label {
+    border-radius: 1;
+    top: -10px;
+} #tambah-lahan-section div#status-lahan > div {
+    background-color: #f3f3f3;
+    display: flex;
+    border-radius: 10px;
+    width: fit-content;
+    align-items: center;
+} #tambah-lahan-section div#status-lahan > div > label[for] {
+    color: #979797;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 120px;
+    font-size: 14px;
+    line-height: 20px;
+} #tambah-lahan-section div#status-lahan > div > label.active {
+    background-color: var(--color-green-primary);
+    color: #494848;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+} #tambah-lahan-section #form-tambah-lahan >  div:last-child {
+    bottom: 30px;
+} #tambah-lahan-section #form-tambah-lahan p {
+    font-weight: 600;
+    font-size: 13px;
+line-height: 16px;
+display: flex;
+align-items: center;
+letter-spacing: -0.015em;
+color: #494848;
+} #tambah-lahan-section p.sub-title {
+    margin-top: 30px;
+}
 
 /* UTILITIES */
 .u-margin-bottom-small {

@@ -86,6 +86,18 @@ $(document).ready(function(){
         $(this).css("visible", "hidden")
     })
 
+    $('input#message').focus(function() {
+        $('#primary-menu').removeClass("d-flex")
+        $('#primary-menu').css("display", "none")
+        $('#chatbot').css("height", "calc(100vh - 96px)")
+    });
+
+    $('input#message').focusout(function() {
+        $('#primary-menu').addClass("d-flex")
+        $('#primary-menu').css("display", "flex")
+        $('#chatbot').css("height", "calc(100vh - 165px)")
+    });
+
     // $("#tab-utama > a").click(function() {
     //     $("#tab-utama a.active").removeClass("active")
     //     $(this).addClass("active")
@@ -105,6 +117,14 @@ $(document).ready(function(){
         }, 500);
     })
 
+    let panen = ""
+    $("#form-panen > div > a.simpan").click(function() {
+        if(panen == ""){
+            panen = "done"
+        }
+        console.log(panen)
+    })
+
     $('#tombol-panen:not(.disabled)').click(function() {
         $('#panen-section').css({
             "visibility" : "visible",
@@ -121,6 +141,11 @@ $(document).ready(function(){
             "opacity" : "0"
         })
         $('#LAHANKU .container p.btn[id]').removeClass("disabled")
+
+        if(panen != ""){
+            $("#tombol-panen").addClass("disabled")
+        }
+
     })
 
     $('#tombol-tambah-lahan').click(function() {
@@ -131,6 +156,7 @@ $(document).ready(function(){
 
         $('#LAHANKU .container p.btn[id]').addClass("disabled")
 
+
     })
 
     $('#close-form-tambah-lahan').click(function() {
@@ -140,10 +166,15 @@ $(document).ready(function(){
         })
         
         $('#LAHANKU .container p.btn[id]').removeClass("disabled")
+
+        if(panen != ""){
+            $("#tombol-panen").addClass("disabled")
+        }
     })
 
     $('#status-lahan > div > label').click(function() {
         $('#status-lahan > div > label.active').removeClass("active")
         $(this).addClass("active")
     })
+
 });

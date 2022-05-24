@@ -10,10 +10,9 @@
 
 body {
     background-image: url("./assets/bg-login.png");
-    background-position: top;
+    background-position: top right;
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position-x: 20px;
+    background-size: 53%;
     padding: 17px 11px;
     background-color: #E5E5E5;
 }
@@ -23,16 +22,16 @@ div.logo {
 }
 
 form {
+    transition: all ease 1s;
     position: absolute;
     width: 90%;
     left: 50%;
-    bottom: 10vh;
+    bottom: 4vh;
     transform: translate(-50%, 0);
 } form .form-control {
     border: none;
     width: 100%;
     background: transparent;
-    margin-bottom: 20px;
 } form .form-input,
 form .input-password {
     width: 100%;
@@ -67,7 +66,8 @@ form .input-password {
     padding-right: 20px;
     color: #494848;
     font-style: italic;
-    margin-top: -10px;
+    margin-top: 10px;
+    margin-bottom: -25px;
     display: block;
 } form a.btn {
     background: #7DCD86;

@@ -67,8 +67,7 @@
     <div id="LAHANKU">
 
 
-        <div id="maps" style="width: 100%; height: 175px;background: grey;">
-
+        <div id="map" style="width: 100%; height: 175px;background: grey;">
         </div>
 
         <div class="container">
@@ -115,7 +114,7 @@
                     <p class="keterangan">23 July 2022</p>
                 </div>
 
-                <div class="d-flex justify-content-evenly">
+                <div class="d-flex justify-content-evenly mt-2">
                     <p class="btn" id="tombol-panen">Panen</p>
                     <p id="tombol-tambah-lahan" class="btn">+ Tambahkan Lahan</p>
                 </div>
@@ -156,49 +155,52 @@
                 <p id="close-form-tambah-lahan">X</p>
             </div>
 
-            <div>
-                <label>Wilayah/Lokasi Lahan</label>
-                <input type="text" placeholder="Isikan lokasi lahan anda">
-            </div>
-
-            <div>
-                <label>Luas Lahan</label>
-                <input type="text" placeholder="Isikan luas lahan anda">
-            </div>
-
-            <div id="status-lahan">
-              <label>Status Lahan</label>
+            <div class="container">
               <div>
-                <label for="statusLahanAktif" class="active">Aktif</label>
-                <label for="statusLahanTidakAktif" >Tidak Aktif</label>
+                  <label>Wilayah/Lokasi Lahan</label>
+                  <input type="text" placeholder="Isikan lokasi lahan anda">
+              </div>
+
+              <div>
+                  <label>Luas Lahan</label>
+                  <input type="text" placeholder="Isikan luas lahan anda">
+              </div>
+
+              <div id="status-lahan">
+                <label>Status Lahan</label>
+                <div>
+                  <label for="statusLahanAktif" class="active">Aktif</label>
+                  <label for="statusLahanTidakAktif" >Tidak Aktif</label>
+                </div>
+              </div>
+
+              <div class="d-none">
+                <input id="statusLahanAktif" type="radio" name="status-lahan" value="aktif" checked>
+                <input id="statusLahanTidakAktif" type="radio" name="status-lahan" value="tidakAktif">
+              </div>
+
+              <p class="sub-title">Komoditas yang ditanam</p>
+
+              <div>
+                  <label>Varietas</label>
+                  <input type="text" placeholder="Isikan varietas yang anda tanam">
+              </div>
+
+              <div>
+                  <label>Tanggal Tanam</label>
+                  <input type="date" placeholder="Isikan tanggal tanam">
+              </div>
+
+              <div>
+                  <label>Tanggal Panen</label>
+                  <input type="date" placeholder="Isikan tanggal panen">
+              </div>
+
+              <div>
+                <a href="#" class="simpan">Simpan</a>
               </div>
             </div>
 
-            <div class="d-none">
-              <input id="statusLahanAktif" type="radio" name="status-lahan" value="aktif" checked>
-              <input id="statusLahanTidakAktif" type="radio" name="status-lahan" value="tidakAktif">
-            </div>
-
-            <p class="sub-title">Komoditas yang ditanam</p>
-
-            <div>
-                <label>Varietas</label>
-                <input type="text" placeholder="Isikan varietas yang anda tanam">
-            </div>
-
-            <div>
-                <label>Tanggal Tanam</label>
-                <input type="date" placeholder="Isikan tanggal tanam">
-            </div>
-
-            <div>
-                <label>Tanggal Panen</label>
-                <input type="date" placeholder="Isikan tanggal panen">
-            </div>
-
-            <div>
-              <a href="#" class="simpan">Simpan</a>
-            </div>
         </div>
     </div>
 
@@ -256,5 +258,45 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <script src="./script.js"></script>
+
+    <script>
+      function initMap() {
+        const myLatLng = { lat: -6.968308975784788, lng: 110.24092653885393 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 5,
+          center: myLatLng,
+        });
+
+        const marker = new google.maps.Marker({
+          position: myLatLng,
+          map,
+          title: "Hello World!",
+        });
+
+        const myLatLng2 = { lat: -7.0450113675722, lng: 107.78317971380247};
+
+        const marker2 =  new google.maps.Marker({
+          position: myLatLng2,
+          map,
+          title: "Hello World!",
+        });
+
+        marker.addListener("click", () => {
+          map.setZoom(10);
+          map.setCenter(marker.getPosition());
+        });
+
+        marker2.addListener("click", () => {
+          map.setZoom(10);
+          map.setCenter(marker2.getPosition());
+        });
+      }
+
+    window.initMap = initMap;
+    </script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+    defer
+  ></script>
 </body>
 </html>

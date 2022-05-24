@@ -411,7 +411,7 @@ a {
     visibility: hidden;
     opacity: 0;
     transition: all ease 1s;
-    height: calc(100vh - 151px);
+    height: calc(100vh - 165px);
     background-color: var(--color-white-2);
     position: fixed;
     top: 82px;
@@ -422,6 +422,7 @@ a {
     border-bottom: 1px solid var(--color-green-primary);
     margin: 0 auto;
     margin-bottom: 10px;
+    padding-bottom: 10px;
 } #chatbot #top-chatbot img {
     margin-right: 15px;
 } #chatbot #top-chatbot > div.d-flex > div {
@@ -577,6 +578,8 @@ a {
     text-align: center;
     color: #FFFFFF;
     flex-basis: 45%;
+} #LAHANKU #informasi-lahan .btn.disabled {
+    background-color: #676767;
 } #LAHANKU #informasi-lahan p {
     font-weight: 700;
     font-size: 10px;
@@ -682,7 +685,7 @@ a {
 } #panen-section #form-panen div:first-child {
     padding: 0 10px;
 } #panen-section #form-panen div:not(:first-child),
-#tambah-lahan-section #form-tambah-lahan div:not(:first-child){
+#tambah-lahan-section #form-tambah-lahan > .container > div:not(:first-child){
     position: relative;
     margin-top: 34px;
 } #panen-section label,
@@ -714,12 +717,12 @@ a {
 #panen-section input::placeholder {
     color: #c4c4c4;
 } #panen-section #form-panen div:last-child,
- #tambah-lahan-section #form-tambah-lahan > div:last-child{
-    position: absolute;
-    bottom: 50px;
+ #tambah-lahan-section #form-tambah-lahan > .container{
     width: inherit;
     left: 50%;
     transform: translateX(-50%);
+    height: calc(100vh - 85px);
+    overflow-y: auto;
 } #panen-section div > .btn {
     background: #7DCD86;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -783,8 +786,15 @@ a {
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-} #tambah-lahan-section #form-tambah-lahan >  div:last-child {
-    bottom: 30px;
+} #tambah-lahan-section #form-tambah-lahan > .container {
+    padding: 0;
+    padding-top: 20px;
+    margin-top: 10px;
+    position: relative;
+    height: 80vh;
+    overflow-y: auto;
+} #tambah-lahan-section #form-tambah-lahan > .container > div:last-child {
+    margin: 30px 0;
 } #tambah-lahan-section #form-tambah-lahan p {
     font-weight: 600;
     font-size: 13px;
@@ -951,4 +961,8 @@ color: #494848;
 .active-sidebar {
     background-color: #CDE293;
     color: #494848;
+}
+
+.btn.disabled {
+    background-color: #676767;
 }

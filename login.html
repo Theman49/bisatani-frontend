@@ -64,6 +64,15 @@
                 $(this)[0].src = "./assets/eye-password-2.png"
             }
         })
+
+        $("input").focus(function() {
+            $("form").css("bottom", "-35vh")
+        })
+
+        $("input").focusout(function() {
+            $("form").css("bottom", "4vh")
+        })
+
     </script>
 </body>
 </html>

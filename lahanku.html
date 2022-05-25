@@ -83,6 +83,7 @@
                 <label class="close-notifikasi">X</label>
             </div>
 
+            <!-- ubah ke display: none jika jumlah lahan lebih dari satu -->
             <div id="informasi-lahan">
                 <h3 class="sub-title">INFORMASI</h3>
                 <div class="d-flex justify-content-between">
@@ -117,6 +118,100 @@
                 <div class="d-flex justify-content-evenly mt-2">
                     <p class="btn" id="tombol-panen">Panen</p>
                     <p id="tombol-tambah-lahan" class="btn">+ Tambahkan Lahan</p>
+                </div>
+            </div>
+
+            <!-- ubah ke display: none jika jumlah lahan hanya satu -->
+            <div id="informasi-lahan-banyak">
+                <h3 class="sub-title">INFORMASI</h3>
+
+                <div class="container-box">
+                    <div id="informasi-lahan-1" class="informasi-lahan">
+                        <div>
+                          <p class="nama-lahan">Lahan X</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <p>LUAS LAHAN</p>
+                          <p class="keterangan">10000,0m<sup>2</sup></p>
+                      </div>
+
+                      <div class="d-flex justify-content-between">
+                          <p>STATUS LAHAN</p>
+                          <p class="badge text-dark">Aktif</p>
+                      </div>
+
+                      <h3 class="sub-title">Komoditas yang ditanam</h3>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="d-flex align-items-center">
+                              <img src="./assets/jagung-2.png" alt="">
+                              <p class="m-0">Jagung</p>
+                          </div>
+                          <p class="badge text-dark m-0">90 HST</p>
+                      </div>
+
+                      <h3 class="sub-title">Waktu Kegiatan</h3>
+                      <div class="d-flex justify-content-between">
+                          <p>TANAM</p>
+                          <p class="keterangan">23 Maret 2022</p>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                          <p>PANEN</p>
+                          <p class="keterangan">23 July 2022</p>
+                      </div>
+
+                      <div class="d-flex justify-content-evenly mt-2">
+                          <p class="btn disabled tombol-panen" >Panen</p>
+                      </div>
+                    </div>
+
+                    <div id="informasi-lahan-2" class="informasi-lahan">
+                        <div>
+                          <p class="nama-lahan">Lahan Y</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <p>LUAS LAHAN</p>
+                          <p class="keterangan">10000,0m<sup>2</sup></p>
+                      </div>
+
+                      <div class="d-flex justify-content-between">
+                          <p>STATUS LAHAN</p>
+                          <p class="badge text-dark">Aktif</p>
+                      </div>
+
+                      <h3 class="sub-title">Komoditas yang ditanam</h3>
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="d-flex align-items-center">
+                              <img src="./assets/jagung-2.png" alt="">
+                              <p class="m-0">Jagung</p>
+                          </div>
+                          <p class="badge text-dark m-0">90 HST</p>
+                      </div>
+
+                      <h3 class="sub-title">Waktu Kegiatan</h3>
+                      <div class="d-flex justify-content-between">
+                          <p>TANAM</p>
+                          <p class="keterangan">23 Maret 2022</p>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                          <p>PANEN</p>
+                          <p class="keterangan">23 July 2022</p>
+                      </div>
+
+                      <div class="d-flex justify-content-evenly mt-2">
+                          <p class="btn disabled tombol-panen" >Panen</p>
+                      </div>
+                    </div>
+                  
+
+
+                </div>
+
+                <div id="show-lahan">
+                  <p>Lihat Informasi Lahan Lain <a href="#informasi-lahan-1" class="active">1</a> <a href="#informasi-lahan-2">2</a> <a href="#informasi-lahan-3">3</a>    ...</p>
+                </div>
+
+                <div class="d-flex justify-content-evenly mt-2">
+                    <p id="tombol-tambah-lahan-2" class="btn">+ Tambahkan Lahan</p>
                 </div>
             </div>
 
@@ -270,7 +365,7 @@
         const marker = new google.maps.Marker({
           position: myLatLng,
           map,
-          title: "Hello World!",
+          title: "Lahan 1",
         });
 
         const myLatLng2 = { lat: -7.0450113675722, lng: 107.78317971380247};
@@ -278,7 +373,7 @@
         const marker2 =  new google.maps.Marker({
           position: myLatLng2,
           map,
-          title: "Hello World!",
+          title: "Lahan 2",
         });
 
         marker.addListener("click", () => {

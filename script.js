@@ -162,7 +162,13 @@ $(document).ready(function(){
         })
 
         $('#LAHANKU .container p.btn[id]').addClass("disabled")
+    })
 
+    $('#tombol-tambah-lahan-2').click(function() {
+        $('#tambah-lahan-section').css({
+            "visibility" : "visible",
+            "opacity" : "1"
+        })
 
     })
 
@@ -184,4 +190,14 @@ $(document).ready(function(){
         $(this).addClass("active")
     })
 
+    // LAHAN BANYAK
+    $('#LAHANKU #show-lahan a').click(function(){
+        $("#LAHANKU #show-lahan a.active").removeClass("active")
+        $("#LAHANKU .informasi-lahan").css("display", "none")
+        let url = (($(this)[0].href).split('#'))[1]
+        let selector = "#LAHANKU #" + url
+        
+        $(selector).css("display", "block")
+        $(this).addClass("active")
+    })
 });

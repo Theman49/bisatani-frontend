@@ -74,28 +74,35 @@ $(document).ready(function(){
             "visibility" : "hidden",
             "opacity" : "0"
         })
-        $('#floating-button-chatbot').css("visible", "visible")
+        $('#floating-button-chatbot').css({"visibility" : "visible", "opacity" : "1"})
     })
 
+    let ot = $('#topbar-menu')[0].offsetTop
+    let ob = $('#primary-menu')[0].offsetTop
+    let ht = $("#topbar-menu")[0].offsetHeight
+    let height = (ob - ot - ht -10)
+
     $('#floating-button-chatbot').click(function() {
+        console.log(ot,ob, height)
         $('#chatbot').css({
             "visibility" : "visible",
-            "opacity" : "1"
+            "opacity" : "1",
+            "height" : height  
         })
 
-        $(this).css("visible", "hidden")
+        $(this).css({"visibility": "hidden", "opacity" : "0"})
     })
 
     $('input#message').focus(function() {
         $('#primary-menu').removeClass("d-flex")
         $('#primary-menu').css("display", "none")
-        $('#chatbot').css("height", "calc(100vh - 96px)")
+        $('#chatbot').css("height", `calc(${height}px - (${height}px / 2))`)
     });
 
     $('input#message').focusout(function() {
         $('#primary-menu').addClass("d-flex")
         $('#primary-menu').css("display", "flex")
-        $('#chatbot').css("height", "calc(100vh - 165px)")
+        $('#chatbot').css("height", `calc(${height}px)`)
     });
 
     // $("#tab-utama > a").click(function() {

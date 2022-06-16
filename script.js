@@ -87,7 +87,8 @@ $(document).ready(function(){
         $('#chatbot').css({
             "visibility" : "visible",
             "opacity" : "1",
-            "height" : height  
+            "height" : height,  
+            "z-index": "200"
         })
 
         $(this).css({"visibility": "hidden", "opacity" : "0"})

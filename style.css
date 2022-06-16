@@ -4,6 +4,7 @@
   }
 
 :root {
+    --color-green-dark: #028D12;
     --color-green-primary:  #7DCD86;
     --color-green-secondary:  #CDE293;
 
@@ -856,6 +857,198 @@ color: #494848;
 } #tambah-lahan-section p.sub-title {
     margin-top: 30px;
 }
+
+
+
+
+
+/* Lahanku Aktivitas */
+#container-lahanku {
+    background-color: #FFF;
+    margin: 0 6px;
+    padding-top: 26px;
+}
+#container-lahanku .h3 {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+}
+#container-lahanku .card-row {
+    background: #FFFFFF;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.1));
+    padding: 14px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#container-lahanku #page1 .card-row {
+    margin: 0 7px;
+}
+#container-lahanku #page1 > .h3:first-child {
+    margin-left: 20px;
+}
+#container-lahanku #page1 .card-row img {
+    width: 35px;
+    height: 35px;
+}
+#container-lahanku #page1 .separator{
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+#container-lahanku #page1 .separator > div {
+    height: 40px;
+    width: 2px;
+    background-color: #494848;
+}
+#container-lahanku .card-row > div:first-child, 
+#container-lahanku .card-row > div:last-child {
+    /* padding: 0 20px; */
+}
+#container-lahanku .card-row .profile {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+#container-lahanku .card-row .profile p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+}
+#container-lahanku .card-row .profile h3 {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: -0.015em;
+}
+#container-lahanku .card-row .flex-right {
+    align-items: center;
+}
+#container-lahanku .card-row .flex-right > div:first-child {
+    margin-right: 15px;
+}
+#container-lahanku .card-row .flex-right > div:first-child h5 {
+    color: #EE5C51;
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: -5px;
+}
+#container-lahanku .card-row .flex-right > div:first-child h1 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0;
+}
+#container-lahanku .card-row .flex-right > div:last-child p.celcius {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 24px;
+    color: #9FF2A9;
+    margin-top: 10px;
+}
+#container-lahanku .card-row .flex-right > div:last-child p.hujan {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 124.84%;
+    /* identical to box height, or 10px */
+    color: var(--color-green-primary);
+    letter-spacing: 0.04em;
+}
+
+#container-lahanku #last-info {
+    background-color: var(--color-green-primary);
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin: 25px 0;
+    background-image: url('./assets/Vector-2.png');
+    background-repeat: no-repeat;
+    background-position-x: -49vw;
+    background-position-y: 100%;
+    background-size: 71%;
+}
+#container-lahanku .badge {
+    border-radius: 6px;
+    background: #9FF2A9;
+}
+#container-lahanku .form-control-input {
+    position: relative;
+    margin-top: 34px;
+}
+
+#container-lahanku .form-control-input label {
+    background-color: white;
+    border-radius: 19px;
+    border-bottom: 3px solid var(--color-green-primary);
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    padding: 5px 10px;
+    color: #494848;
+    position: absolute;
+    transform: translate(10px, -50%);
+}
+
+#container-lahanku .form-control-input input {
+    border: none;
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 10px;
+    color: #979797;
+    width: 100%;
+    border-radius: 10px;
+}
+#container-lahanku .form-control-input textarea {
+    border: none;
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 10px;
+    color: #979797;
+    width: 100%;
+    border-radius: 10px;
+}
+#container-lahanku .form-control-input a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+}
+#container-lahanku .form-control-input input:focus {
+    outline: none;
+}
+#container-lahanku .form-control-input p {
+    position: absolute;
+    bottom: 50%;
+    right: 10px;
+    transform: translate(0, 50%);
+    color: var(--color-green-dark);
+    font-size: 12px;
+}
+#container-lahanku #last-info .btn {
+    background: #028D12;
+    border-radius: 8px;
+    opacity: .5;
+    padding: 10px 20px;
+}
+#container-lahanku #last-info a.btn {
+    margin: 40px auto;
+    display: block;
+    width: fit-content;
+    text-decoration: underline;
+    margin-bottom: 150px;
+}
+
+
+
+
 
 /* UTILITIES */
 .u-margin-bottom-small {

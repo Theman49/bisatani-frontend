@@ -111,10 +111,10 @@ $(document).ready(function(){
     //     $(this).addClass("active")
     // })
 
-    $("#tab-utama > div").click(function() {
-        $("#tab-utama div.active").removeClass("active")
-        $(this).addClass("active")
-    })
+    // $("#tab-utama > div").click(function() {
+    //     $("#tab-utama div.active").removeClass("active")
+    //     $(this).addClass("active")
+    // })
 
 
     $('.notifikasi-harian .close-notifikasi').click(function() {

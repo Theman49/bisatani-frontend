@@ -868,7 +868,8 @@ color: #494848;
     margin: 0 6px;
     padding-top: 26px;
 }
-#container-lahanku .h3 {
+#container-lahanku .h3,
+#container-riwayat-lahan .h3 {
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
@@ -1164,6 +1165,127 @@ color: #494848;
 }
 
 
+/* RIWAYAT LAHAN */
+#container-riwayat-lahan {
+    background-color: #fff;
+    padding: 30px 24px;
+    border-radius: 15px;
+    margin-bottom: 6px;
+    background-image: url('./assets/Vector-1.png');
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    padding-bottom: 200px;
+    background-position-x: 110%;
+    background-size: 28%;
+}
+#container-riwayat-lahan .lahan {
+    background: #F3F3F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+    padding: 24px 16px;
+    margin-top: 30px;
+}
+#container-riwayat-lahan .lahan .label {
+    background: #7DCD86;
+    border-radius: 10px;
+    font-size: 12px;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, -50%);
+    padding: 3px 12px;
+    padding-left: 0;
+}
+#container-riwayat-lahan .lahan .label > div:first-child {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 3px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0px, -20%);
+}
+#container-riwayat-lahan .lahan .label > div:last-child label:last-child {
+    margin-left: 25px;
+}
+#container-riwayat-lahan .lahan > h3 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 124.84%;
+    letter-spacing: 0.04em;
+    margin-top: 10px;
+}
+#container-riwayat-lahan .lahan > div.d-flex, 
+#container-riwayat-lahan .lahan > #informasi-umum  > div.d-flex {
+    margin-bottom: 10px;
+}
+#container-riwayat-lahan .lahan > div.d-flex:nth-child(5), 
+#container-riwayat-lahan .lahan > #informasi-umum > div.d-flex:last-child {
+    margin-top: -15px;
+}
+#container-riwayat-lahan .lahan > div.d-flex h5,
+#container-riwayat-lahan .lahan #informasi-umum > div.d-flex h5 {
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 124.84%;
+    letter-spacing: 0.04em;
+    margin-bottom: 0;
+}
+#container-riwayat-lahan .lahan > div.d-flex .badge,
+#container-riwayat-lahan .lahan > #informasi-umum div.d-flex .badge {
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 124.84%;
+    letter-spacing: 0.04em;
+    padding: 3px 5px;
+    color: #000;
+}
+#container-riwayat-lahan .lahan > div.d-flex .badge-off, 
+#container-riwayat-lahan .lahan > #informasi-umum div.d-flex .badge-off {
+    background: #C4C4C4;
+}
+#container-riwayat-lahan .lahan > div.d-flex .badge-on, 
+#container-riwayat-lahan .lahan > #informasi-umum div.d-flex .badge-on {
+    background: var(--color-green-primary);
+}
+#container-riwayat-lahan .lahan > div.d-flex img {
+    width: 40px;
+    height: 40px;
+}
+#container-riwayat-lahan .lahan > .btn-panen {
+    border-radius: 10px;
+    color: white;
+    text-decoration: underline;
+    width: 65%;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    opacity: .5;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+}
+#container-riwayat-lahan .lahan > .btn-panen-off {
+    background: #494848;
+}
+#container-riwayat-lahan .lahan > .btn-panen-on {
+    background: var(--color-green-primary);
+    opacity: 1;
+}
+#container-riwayat-lahan .lahan #informasi-umum {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 6px 8px;
+}
+#container-riwayat-lahan .lahan > #informasi-umum > div.d-flex:last-child {
+    margin-bottom: 0;
+}
+
+
 
 /* UTILITIES */
 .u-margin-bottom-small {
@@ -1326,4 +1448,8 @@ color: #494848;
     color: #fff;
     opacity: .4;
     border-radius: 8px;
+}
+
+.text-green {
+    color: #7DCD86;
 }

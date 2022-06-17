@@ -201,4 +201,86 @@ $(document).ready(function(){
         $(selector).css("display", "block")
         $(this).addClass("active")
     })
+
+
+    // LAHANKU Aktivitas PAGE 2 open
+    $("#open-page2").click(function() {
+        $("#page2").css({
+            "opacity" : "1",
+            "visibility" : "visible"
+        })
+    })
+
+    // LAHANKU Aktivitias PAGE 2 close
+    $("#close-page2").click(function() {
+        $("#page2").css({
+            "opacity" : "0",
+            "visibility" : "hidden"
+        })
+    })
+
+    // show popup pilih lahan dan aktivitas
+    function showPopup(name){
+        $(name).css({
+            "opacity" : "1",
+            "visibility" : "visible"
+        })
+    }
+
+    $("#pilihLahan").click(function () {
+        showPopup('#popup-lahan')}
+    );
+    $("#pilihAktivitas").click(function () {
+        showPopup('#popup')}
+    );
+
+    // Page LAHANKU tab aktivitas popup pilih aktivitas
+    function chooseItem(input, popup, getValue){
+        $(input)[0].value = getValue;
+
+        $(popup).css({
+            "opacity" : "0",
+            "visibility" : "hidden"
+        })
+
+    }
+    $("#select-option-lahan ul li").click(function(){
+        let value = $(this).text();
+        chooseItem("#pilihLahan", "#popup-lahan", value)
+    });
+    $("#select-option ul li").click(function() {
+        let value = $(this).text();
+        chooseItem("#pilihAktivitas", "#popup", value)
+    });
+
+
+    // $("#select-option ul li").click(function () {
+    //     $("#pilihAktivitas")[0].value = $(this).text();
+
+    //     $("#popup").css({
+    //         "opacity" : "0",
+    //         "visibility" : "hidden"
+    //     })
+    // })
+
+    // Close popup pilih aktivitas
+    function closePopup(name){
+        $(name).css({
+            "opacity" : "0",
+            "visibility" : "hidden"
+        })
+    }
+    $("#popup-lahan #close-popup-lahan").click(function() {
+        closePopup("#popup-lahan")
+    });
+    $("#popup #close-popup").click(function() {
+        closePopup("#popup")
+    });
+
+    // $("#popup #close-popup").click(function (){
+    //     $("#popup").css({
+    //         "opacity" : "0",
+    //         "visibility" : "hidden"
+    //     })
+    // })
 });

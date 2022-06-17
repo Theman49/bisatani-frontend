@@ -114,9 +114,108 @@
                         <p>03 April 2022</p>
                     </div>
 
-                    <a href="#" class="btn text-white" >+ Tambahkan Aktivitas</a>
+                    <a id="open-page2" href="#" class="btn text-white" >+ Tambahkan Aktivitas</a>
 
                 </div>
+            </div>
+
+            <div id="page2">
+                <form action="">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h3 class="h3">Aktivitas</h3>
+                        </div>
+                        <div>
+                            <h3 id="close-page2" class="h3">X</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="form-control-input">
+                        <label class="select-box" for="">
+                            <label class="no-border">Pilih Lahan</label>
+                            <input type="text" id="pilihLahan" value="Pilih Lahan" readonly>
+                        </label>
+                    </div>
+
+                    <div class="form-control-input">
+                        <label class="select-box" for="">
+                            <label class="no-border">Pilih Aktivitas</label>
+                            <input type="text" id="pilihAktivitas" value="Pilih Aktivitas" readonly/>
+                        </label>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="form-control-input">
+                            <label class="no-border">Waktu Aktivitas</label>
+                            <input type="time">
+                        </div>
+
+                        <div class="form-control-input">
+                            <label class="no-border">Catatan Aktivitas</label>
+                            <input type="date">
+                        </div>
+                    </div>
+
+
+                    <div class="form-control-input">
+                        <label class="no-border">Catatan Aktivitas</label>
+                        <textarea name="" id="" cols="30" rows="3">Isilah catatan aktivitas anda</textarea>
+                    </div>
+        
+                    <a href="#" class="btn text-white" >+ Tambahkan Foto</a>
+                    <button type="submit" id="simpan" class="btn-span text-white" value="Simpan">Simpan</button>
+                </form>
+
+            </div>
+
+            <div id="popup-lahan">
+                <div id="content-popup-lahan">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h3 class="h3">Pilih Aktivitas</h3>
+                        </div>
+                        <div>
+                            <h3 id="close-popup-lahan" class="h3">X</h3>
+                        </div>
+                    </div>
+
+                    <div id="select-option-lahan">
+                        <ul>
+                            <li>Lahan X</li>
+                            <li>Lahan Y</li>
+                            <li>Lahan Z</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="popup">
+                <div id="content-popup">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h3 class="h3">Pilih Aktivitas</h3>
+                        </div>
+                        <div>
+                            <h3 id="close-popup" class="h3">X</h3>
+                        </div>
+                    </div>
+
+                    <div id="select-option">
+                        <ul>
+                            <li>Persiapan Lahan</li>
+                            <li>Pemupukan Dasar</li>
+                            <li>Penyemaian</li>
+                            <li>Pembuatan Bedengan</li>
+                            <li>Pindah Tanam</li>
+                            <li>Pemupukan Susulan</li>
+                        </ul>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 

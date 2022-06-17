@@ -903,10 +903,7 @@ color: #494848;
     width: 2px;
     background-color: #494848;
 }
-#container-lahanku .card-row > div:first-child, 
-#container-lahanku .card-row > div:last-child {
-    /* padding: 0 20px; */
-}
+
 #container-lahanku .card-row .profile {
     flex-direction: column;
     justify-content: center;
@@ -978,7 +975,7 @@ color: #494848;
     margin-top: 34px;
 }
 
-#container-lahanku .form-control-input label {
+#container-lahanku .form-control-input label:not([for]) {
     background-color: white;
     border-radius: 19px;
     border-bottom: 3px solid var(--color-green-primary);
@@ -1019,7 +1016,8 @@ color: #494848;
     font-size: 12px;
     line-height: 24px;
     text-align: center;
-    text-decoration-line: underline;
+    text-decoration-line: underline;    opacity: 0;
+    visibility: hidden;
 }
 #container-lahanku .form-control-input input:focus {
     outline: none;
@@ -1038,15 +1036,132 @@ color: #494848;
     opacity: .5;
     padding: 10px 20px;
 }
-#container-lahanku #last-info a.btn {
+#container-lahanku #last-info a.btn{
     margin: 40px auto;
     display: block;
     width: fit-content;
     text-decoration: underline;
     margin-bottom: 150px;
 }
-
-
+#container-lahanku #page2 {
+    background-image: url("./assets/Vector-2.png");
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: -50vh;
+    background-color: #fff;
+    padding: 10px 0 130px;
+    position: absolute;
+    top: 117px;
+    left: 0;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+}
+#container-lahanku #page2 label.select-box {
+    width: 85vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#container-lahanku #page2 label.select-box::after {
+    content: url('./assets/V.png');
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0, -50%);
+}
+#container-lahanku #page2 .select-box > input {
+    appearance: none;
+    width: 100%;
+    color: #C4C4C4;
+    background-color: #F3F3F3;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+}
+#container-lahanku #page2 .select-box > select option {
+    /* display: none; */
+    border: 0;
+}
+#container-lahanku #page2 > form > div.form-control-input:nth-child(5){
+    width: 85vw;
+    margin: 34px auto;
+}
+#container-lahanku #page2 label.no-border {
+    border: none;
+}
+#container-lahanku #page2 > form > div.d-flex {
+    width: 84vw;
+    margin: 34px auto;
+}
+#container-lahanku #page2 > form > div.d-flex > .form-control-input {
+    width: 47%;
+    margin: 0;
+    font-size: 12px;
+}
+#container-lahanku #page2 > form > div.d-flex > .form-control-input > label.no-border {
+    left: 50%;
+    transform: translate(-50%, -10px);
+    width: fit-content;
+}
+#container-lahanku #page2 .btn {
+    background: #7DCD86;
+    border-radius: 8px;
+    border-radius: 8px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+#container-lahanku #page2 .btn-span {
+    background: #7DCD86;
+    border-radius: 10px;
+    padding: 5px 20px;
+    display: block;
+    width: fit-content;
+}
+#container-lahanku #page2 #simpan {
+    margin: 24px auto;
+    border: none;
+}
+#container-lahanku #popup,
+#container-lahanku #popup-lahan {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,.3);
+    z-index: 2100;
+}
+#container-lahanku #popup #content-popup, 
+#container-lahanku #popup-lahan #content-popup-lahan {
+    border-radius: 20px;
+    width: 80vw;
+    padding: 16px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+#container-lahanku #popup #select-option,
+#container-lahanku #popup-lahan #select-option-lahan {
+    margin-top: 20px;
+}
+#container-lahanku #popup #select-option ul,
+#container-lahanku #popup-lahan #select-option-lahan ul{
+    padding: 0;
+}
+#container-lahanku #popup #select-option ul li,
+#container-lahanku #popup-lahan #select-option-lahan ul li{
+    list-style: none;
+    border-bottom: 1px solid #C4C4C4;
+    line-height: 30px;
+}
 
 
 

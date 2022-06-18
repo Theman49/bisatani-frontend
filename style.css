@@ -873,7 +873,7 @@ color: #494848;
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
-    margin: 0;
+    margin: 5px 0;
 }
 #container-lahanku .card-row {
     background: #FFFFFF;
@@ -1283,6 +1283,42 @@ color: #494848;
 }
 #container-riwayat-lahan .lahan > #informasi-umum > div.d-flex:last-child {
     margin-bottom: 0;
+}
+#container-riwayat-lahan .lahan #history {
+    padding: 6px 8px;
+}
+#container-riwayat-lahan .lahan #history ul {
+    padding: 0;
+}
+#container-riwayat-lahan .lahan #history ul li{
+    list-style: none;
+    padding-right: 10px;
+    border-right: 1px solid var(--color-green-primary);
+    position: relative;
+    padding-top: 10px;
+}
+#container-riwayat-lahan .lahan #history ul li::after{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: var(--color-green-primary);
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+}
+#container-riwayat-lahan .lahan #history ul li:last-child::after{
+    background-color: red;
+}
+#container-riwayat-lahan .lahan #history ul li .line {
+    background-color: #c4c4c4;
+    height: .5px;
+    width: 90%;
+}
+#container-riwayat-lahan .lahan #history ul h3, 
+#container-riwayat-lahan .lahan #history ul h6 {
+    font-size: 12px;
 }
 
 

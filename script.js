@@ -106,16 +106,6 @@ $(document).ready(function(){
         $('#chatbot').css("height", `calc(${height}px)`)
     });
 
-    // $("#tab-utama > a").click(function() {
-    //     $("#tab-utama a.active").removeClass("active")
-    //     $(this).addClass("active")
-    // })
-
-    // $("#tab-utama > div").click(function() {
-    //     $("#tab-utama div.active").removeClass("active")
-    //     $(this).addClass("active")
-    // })
-
 
     $('.notifikasi-harian .close-notifikasi').click(function() {
         $(this)[0].parentElement.style = "visibility: hidden; opacity: 0"
@@ -253,17 +243,7 @@ $(document).ready(function(){
         chooseItem("#pilihAktivitas", "#popup", value)
     });
 
-
-    // $("#select-option ul li").click(function () {
-    //     $("#pilihAktivitas")[0].value = $(this).text();
-
-    //     $("#popup").css({
-    //         "opacity" : "0",
-    //         "visibility" : "hidden"
-    //     })
-    // })
-
-    // Close popup pilih aktivitas
+    // Close popup pilih aktivitas dan lahan
     function closePopup(name){
         $(name).css({
             "opacity" : "0",
@@ -277,10 +257,11 @@ $(document).ready(function(){
         closePopup("#popup")
     });
 
-    // $("#popup #close-popup").click(function (){
-    //     $("#popup").css({
-    //         "opacity" : "0",
-    //         "visibility" : "hidden"
-    //     })
-    // })
+
+
+    // Riwayat Lahan
+    $("#container-riwayat-lahan button:not([disabled])").click(function(){
+        document.location.href = "./detail-riwayat-lahan.html";
+    })
+
 });

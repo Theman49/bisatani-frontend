@@ -260,8 +260,44 @@ $(document).ready(function(){
 
 
     // Riwayat Lahan
-    $("#container-riwayat-lahan button:not([disabled])").click(function(){
+
+    $("#container-riwayat-lahan .lahan").click(function(){
         document.location.href = "./detail-riwayat-lahan.html";
     })
+
+    $("#container-riwayat-lahan .lahan + .btn-panen-on").click(function(){
+        $("#popup-jual-panen").css({
+            "opacity" : "1",
+            "visibility" : "visible",
+        })
+    });
+
+    $("#close-popup-jual-panen").click(function() {
+        $("#popup-jual-panen").css({
+            "opacity" : "0",
+            "visibility" : "hidden",
+        })
+    })
+
+    $("#popup-jual-panen #lanjutkan").click(function(e) {
+        e.preventDefault();
+        $("#popup-jual-panen + #notification").css({
+            "opacity" : "1",
+            "visibility" : "visible",
+        })
+    })
+
+    $("#popup-jual-panen + #notification #kembali").click(function() {
+        $("#popup-jual-panen + #notification").css({
+            "opacity" : "0",
+            "visibility" : "hidden",
+        })
+        
+        $("#popup-jual-panen").css({
+            "opacity" : "0",
+            "visibility" : "hidden",
+        })
+    })
+
 
 });

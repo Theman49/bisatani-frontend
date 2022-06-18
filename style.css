@@ -867,9 +867,11 @@ color: #494848;
     background-color: #FFF;
     margin: 0 6px;
     padding-top: 26px;
+    border-radius: 0 0 15px 15px;
 }
 #container-lahanku .h3,
-#container-riwayat-lahan .h3 {
+#container-riwayat-lahan .h3,
+#popup-jual-panen .h3 {
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
@@ -971,12 +973,14 @@ color: #494848;
     border-radius: 6px;
     background: #9FF2A9;
 }
-#container-lahanku .form-control-input {
+#container-lahanku .form-control-input, 
+#popup-jual-panen .form-control-input {
     position: relative;
     margin-top: 34px;
 }
 
-#container-lahanku .form-control-input label:not([for]) {
+#container-lahanku .form-control-input label:not([for]),
+#popup-jual-panen .form-control-input label:not([for]) {
     background-color: white;
     border-radius: 19px;
     border-bottom: 3px solid var(--color-green-primary);
@@ -991,7 +995,8 @@ color: #494848;
     transform: translate(10px, -50%);
 }
 
-#container-lahanku .form-control-input input {
+#container-lahanku .form-control-input input, 
+#popup-jual-panen .form-control-input input {
     border: none;
     background-color: #f3f3f3;
     padding: 15px;
@@ -1054,11 +1059,12 @@ color: #494848;
     background-color: #fff;
     padding: 10px 0 130px;
     position: absolute;
-    top: 117px;
-    left: 0;
-    width: 100vw;
+    top: 121px;
+    left: 1vw;
+    width: 98vw;
     opacity: 0;
     visibility: hidden;
+    border-radius: 0px 0px 15px 15px;
 }
 #container-lahanku #page2 label.select-box {
     width: 85vw;
@@ -1169,14 +1175,18 @@ color: #494848;
 #container-riwayat-lahan {
     background-color: #fff;
     padding: 30px 24px;
-    border-radius: 15px;
+    margin: 0 6px;
     margin-bottom: 6px;
-    background-image: url('./assets/Vector-1.png');
+    background-image: url('./assets/Vector-2.png');
     background-repeat: no-repeat;
     background-position-y: 100%;
     padding-bottom: 200px;
-    background-position-x: 110%;
-    background-size: 28%;
+    background-position-x: 135%;
+    background-size: 40%;
+    border-radius: 0 0 15px 15px;
+}
+#container-riwayat-lahan .lahan-box {
+    position: relative;
 }
 #container-riwayat-lahan .lahan {
     background: #F3F3F3;
@@ -1185,6 +1195,7 @@ color: #494848;
     position: relative;
     padding: 24px 16px;
     margin-top: 30px;
+    padding-bottom: 50px;
 }
 #container-riwayat-lahan .lahan .label {
     background: #7DCD86;
@@ -1255,7 +1266,7 @@ color: #494848;
     width: 40px;
     height: 40px;
 }
-#container-riwayat-lahan .lahan > .btn-panen {
+#container-riwayat-lahan .lahan + .btn-panen {
     border-radius: 10px;
     color: white;
     text-decoration: underline;
@@ -1268,11 +1279,14 @@ color: #494848;
     font-size: 13px;
     font-weight: 700;
     border: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50px);
 }
-#container-riwayat-lahan .lahan > .btn-panen-off {
+#container-riwayat-lahan .lahan + .btn-panen-off {
     background: #494848;
 }
-#container-riwayat-lahan .lahan > .btn-panen-on {
+#container-riwayat-lahan .lahan + .btn-panen-on {
     background: var(--color-green-primary);
     opacity: 1;
 }
@@ -1305,7 +1319,7 @@ color: #494848;
     background-color: var(--color-green-primary);
     top: 50%;
     right: 0;
-    transform: translate(50%, -50%);
+    transform: translate(55%, -50%);
     border-radius: 50%;
 }
 #container-riwayat-lahan .lahan #history ul li:last-child::after{
@@ -1314,13 +1328,89 @@ color: #494848;
 #container-riwayat-lahan .lahan #history ul li .line {
     background-color: #c4c4c4;
     height: .5px;
-    width: 90%;
+    width: 95%;
 }
-#container-riwayat-lahan .lahan #history ul h3, 
-#container-riwayat-lahan .lahan #history ul h6 {
+#container-riwayat-lahan .lahan #history ul h3 {
     font-size: 12px;
+    font-weight: 700;
+}
+#container-riwayat-lahan .lahan #history ul h6 {
+    font-size: 10px;
+    font-weight: 700;
+}
+#container-riwayat-lahan + #popup-jual-panen,
+#container-riwayat-lahan ~ #notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(196, 196, 196, 0.7);
+    z-index: 2100;
+    opacity: 0;
+    visibility: hidden;
+}
+#container-riwayat-lahan + #popup-jual-panen form,
+#container-riwayat-lahan ~ #notification > div {
+    padding: 25px 15px;
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background: #fff;
+}
+#container-riwayat-lahan + #popup-jual-panen form p:not(.label) {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+#container-riwayat-lahan + #popup-jual-panen form p.label {
+    background-color: white;
+    border-radius: 19px;
+    border-bottom: 3px solid var(--color-green-primary);
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    padding: 5px 10px;
+    color: #494848;
+    width: 50%;
+}
+#container-riwayat-lahan + #popup-jual-panen button.btn-small-green,
+#container-riwayat-lahan ~ #notification div button.btn-small-green {
+    background: #7DCD86;
+    border-radius: 10px;
+    padding: 3px 20px;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+}
+#container-riwayat-lahan + #popup-jual-panen button {
+    margin-top: 10px;
+    margin-left: 100%;
+    transform: translate(-100%, 0);
 }
 
+#container-riwayat-lahan ~ #notification div {
+    text-align: center;
+}
+#container-riwayat-lahan ~ #notification div p{
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.015em;
+    color: #494848;
+    width: 80%;
+    margin: 0 auto;
+}
+#container-riwayat-lahan ~ #notification div button{
+    margin-top: 10px;
+}
 
 
 /* UTILITIES */
